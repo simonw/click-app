@@ -1,0 +1,64 @@
+name: Update demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_demo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout click-app
+      uses: actions/checkout@v2
+      with:
+        path: main
+    - name: Checkout click-app-template-demo
+      uses: actions/checkout@v2
+      with:
+        repository: simonw/click-app-template-demo
+        path: click-app-template-demo-current
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH }}
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - uses: actions/cache@v2
+      name: Configure pip caching
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install dependencies
+      run: |
+        pip install cookiecutter
+    - name: Build demo from template
+      run: |-
+        cat main/input-for-demo.txt | cookiecutter main
+        find click-app-template-demo
+    - name: Push to git
+      env:
+        PERSONAL_ACCESS_TOKEN_FOR_PUSH: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH }}
+      run: |-
+        # Move the .git folder across
+        mv click-app-template-demo-current/.git click-app-template-demo
+        # Commit and push the changes
+        cd click-app-template-demo
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A .
+        git commit -m "Demo of click-app ${GITHUB_SHA}" || exit 0
+        git push -u origin main
+    - name: Post commit comment
+      run: |-
+        cd click-app-template-demo
+        export FULL_SHA=$(git rev-parse HEAD)
+        export SHORT_SHA=${FULL_SHA::8}
+        export NEWLINE=$'\n'
+        echo '{}' | jq --arg v "Demo: https://github.com/simonw/click-app-template-demo/tree/$SHORT_SHA" \
+          '. + { body: $v }' | \
+        curl -sL  -X POST -d @- \
+          -H "Content-Type: application/json" \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/comments"
