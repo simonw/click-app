@@ -9,7 +9,7 @@
 
 ## Installation
 
-Install this plugin using `pip`:
+Install this tool using `pip`:
 
     $ pip install {{ cookiecutter.hyphenated }}
 
