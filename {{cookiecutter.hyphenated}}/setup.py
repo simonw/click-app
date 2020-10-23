@@ -36,4 +36,5 @@ setup(
         "test": ["pytest"]
     },
     tests_require=["{{ cookiecutter.hyphenated }}[test]"],
+    python_requires=">=3.6",
 )
