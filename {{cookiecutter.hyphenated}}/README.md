@@ -29,7 +29,7 @@ Or if you are using `pipenv`:
 
     pipenv shell
 
-Now install the dependencies and tests:
+Now install the dependencies and test dependencies:
 
     pip install -e '.[test]'
 
