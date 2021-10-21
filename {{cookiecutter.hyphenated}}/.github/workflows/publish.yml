@@ -47,12 +47,12 @@ jobs:
           ${{ runner.os }}-publish-pip-
     - name: Install dependencies
       run: |
-        pip install setuptools wheel twine
+        pip install setuptools wheel twine build
     - name: Publish
       env:
         TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
       run: |
-        python setup.py sdist bdist_wheel
+        python -m build
         twine upload dist/*
 {% endraw %}
