@@ -1,6 +1,6 @@
 # click-app cookiecutter template
 
-Cookiecutter template for creating new Click command-line tools.
+Cookiecutter template for creating new [Click](https://click.palletsprojects.com/) command-line tools.
 
 Use this template on your own machine with cookiecutter, or create a brand new repository based on this template entirely through the GitHub web interface using [click-app-template-repository](https://github.com/simonw/click-app-template-repository).
 
