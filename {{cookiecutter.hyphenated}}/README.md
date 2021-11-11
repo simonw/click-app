@@ -22,7 +22,7 @@ Usage instructions go here.
 To contribute to this tool, first checkout the code. Then create a new virtual environment:
 
     cd {{ cookiecutter.hyphenated }}
-    python -mvenv venv
+    python -m venv venv
     source venv/bin/activate
 
 Or if you are using `pipenv`:
