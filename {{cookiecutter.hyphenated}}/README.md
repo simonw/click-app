@@ -25,10 +25,6 @@ To contribute to this tool, first checkout the code. Then create a new virtual e
     python -m venv venv
     source venv/bin/activate
 
-Or if you are using `pipenv`:
-
-    pipenv shell
-
 Now install the dependencies and test dependencies:
 
     pip install -e '.[test]'
