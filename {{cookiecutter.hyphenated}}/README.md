@@ -15,7 +15,13 @@ Install this tool using `pip`:
 
 ## Usage
 
-Usage instructions go here.
+For help, run:
+
+    {{ cookiecutter.hyphenated }} --help
+
+You can also use:
+
+    python -m {{ cookiecutter.underscored }} --help
 
 ## Development
 
