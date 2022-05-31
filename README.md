@@ -12,6 +12,14 @@ You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/) install
 
 Regular `pip` will work OK too.
 
+## Examples
+
+Three examples of tools that were initially created using this template:
+
+- [shot-scraper](https://github.com/simonw/shot-scraper): A comand-line utility for taking automated screenshots of websites
+- [s3-credentials](https://github.com/simonw/s3-credentials): A tool for creating credentials for accessing S3 buckets
+- [git-history](https://github.com/simonw/git-history):  Tools for analyzing Git history using SQLite
+
 ## Usage
 
 Run `cookiecutter gh:simonw/click-app` and then answer the prompts. Here's an example run:
