@@ -10,33 +10,33 @@
 - Based on cookiecutter template [william-cass-wright/click-app](https://github.com/william-cass-wright/click-app)
 
 ## Installation
-
 Install this tool using `pip`:
-
-    pip install {{ cookiecutter.hyphenated }}
+```bash
+pip install {{ cookiecutter.hyphenated }}
+```
 
 ## Usage
-
 For help, run:
-
-    {{ cookiecutter.hyphenated }} --help
-
+```bash
+{{ cookiecutter.hyphenated }} --help
+```
 You can also use:
-
-    python -m {{ cookiecutter.underscored }} --help
+```bash
+python -m {{ cookiecutter.underscored }} --help
+```
 
 ## Development
-
 To contribute to this tool, first checkout the code. Then create a new virtual environment:
-
-    cd {{ cookiecutter.hyphenated }}
-    python -m venv venv
-    source venv/bin/activate
-
+```bash
+cd {{ cookiecutter.hyphenated }}
+python -m venv venv
+source venv/bin/activate
+```
 Now install the dependencies and test dependencies:
-
-    pip install -e '.[test]'
-
+```bash
+pip install -e '.[test]'
+```
 To run the tests:
-
-    pytest
+```bash
+pytest
+```
