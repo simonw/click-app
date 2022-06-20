@@ -10,7 +10,9 @@ You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/) install
 
     pipx install cookiecutter
 
-Regular `pip` will work OK too.
+or 
+
+    pip install cookiecutter
 
 ## Examples
 
@@ -20,25 +22,24 @@ Projects created from this cookiecutter template:
 - [shot-scraper](https://github.com/simonw/shot-scraper): A comand-line utility for taking automated screenshots of websites
 - [s3-credentials](https://github.com/simonw/s3-credentials): A tool for creating credentials for accessing S3 buckets
 - [git-history](https://github.com/simonw/git-history):  Tools for analyzing Git history using SQLite
+- See [click-app-template-demo](https://github.com/simonw/click-app-template-demo) for the output of the template demo.
 
 ## Usage
 
-Run `cookiecutter gh:simonw/click-app` and then answer the prompts. Here's an example run:
+Run `cookiecutter gh:william-cass-wright/click-app` and then answer the prompts. Here's an example run:
 
     $ cookiecutter gh:william-cass-wright/click-app
-    app_name []: click app template demo
+    app_name []: my new command line tool
     description []: Demonstrating https://github.com/william-cass-wright/click-app
-    hyphenated [click-app-template-demo]: 
-    underscored [click_app_template_demo]: 
-    abbreviated []: 
+    hyphenated [my-new-command-line-tool]: 
+    underscored [my_new_command_line_tool]: 
+    abbreviated []: new-tool
     github_username []: william-cass-wright
     author_name []: Will Wright
 
 I strongly recommend accepting the suggested value for "hyphenated" and "underscored" by hitting enter on those prompts.
 
-This will create a directory called `click-app-template-demo` - the tool name you enter is converted to lowercase and uses hyphens instead of spaces.
-
-See https://github.com/simonw/click-app-template-demo for the output of this example.
+This will create a directory called `my-new-command-line-tool` - the tool name you enter is converted to lowercase and uses hyphens instead of spaces.
 
 ## Developing your command-line tool
 
