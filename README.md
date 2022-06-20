@@ -94,7 +94,7 @@ The template will have created a GitHub Action which runs your tool's test suite
 
 ## Publishing your tool as a package to PyPI
 
-The template also includes an Action for publishing packages to [PyPI](https://pypi.org/).
+The template also includes an Action (.github/workflows/publish.yml) for publishing packages to [PyPI](https://pypi.org/).
 
 To use this action, you need to create a PyPI account and an API token against that account.
 
