@@ -1,12 +1,12 @@
-name: Update demo
+name: Publish demo
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [ labeled ]
 
 jobs:
   update_demo:
+    if: ${{ github.event.label.name == 'publish-demo' }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout click-app
