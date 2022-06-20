@@ -29,7 +29,7 @@ setup(
     packages=["{{ cookiecutter.underscored }}"],
     entry_points="""
         [console_scripts]
-        {{ cookiecutter.hyphenated }}={{ cookiecutter.underscored }}.cli:cli
+        {{ cookiecutter.abreviated }}={{ cookiecutter.underscored }}.cli:cli
     """,
     install_requires=["click"],
     extras_require={

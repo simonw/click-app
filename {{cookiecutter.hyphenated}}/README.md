@@ -5,7 +5,9 @@
 [![Tests](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/workflows/Test/badge.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/blob/master/LICENSE){% endif %}
 
-{{ cookiecutter.description }}
+- {{ cookiecutter.description }}
+- [PyPI project](https://pypi.org/project/{{ cookiecutter.hyphenated }}}) (once published)
+- Based on cookiecutter template [william-cass-wright/click-app](https://github.com/william-cass-wright/click-app)
 
 ## Installation
 

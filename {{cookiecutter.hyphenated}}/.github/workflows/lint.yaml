@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  pull_request:
+    types: [ labeled ]
+
+permissions:
+  contents: read
+{% raw %}
+jobs:
+  label-lint:
+    if: ${{ github.event.label.name == 'lint' }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2  
+    - name: Python Linter
+      uses: sunnysid3up/python-linter@master
+      with:
+        source: "secrets_mgmt_cli"
+        strict: "low"
+        mypy-options: "--ignore-missing-imports --show-error-codes"
+        isort-options: "-w 100"
+        black-options: "-l 120"
+{% endraw %}

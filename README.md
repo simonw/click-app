@@ -14,8 +14,9 @@ Regular `pip` will work OK too.
 
 ## Examples
 
-Three examples of tools that were initially created using this template:
+Projects created from this cookiecutter template:
 
+- [secrets-mgmt-cli](https://github.com/william-cass-wright/secrets-mgmt-cli): A simple CLI for managing secrets in AWS Secrets Manager
 - [shot-scraper](https://github.com/simonw/shot-scraper): A comand-line utility for taking automated screenshots of websites
 - [s3-credentials](https://github.com/simonw/s3-credentials): A tool for creating credentials for accessing S3 buckets
 - [git-history](https://github.com/simonw/git-history):  Tools for analyzing Git history using SQLite
@@ -24,13 +25,14 @@ Three examples of tools that were initially created using this template:
 
 Run `cookiecutter gh:simonw/click-app` and then answer the prompts. Here's an example run:
 
-    $ cookiecutter gh:simonw/click-app
+    $ cookiecutter gh:william-cass-wright/click-app
     app_name []: click app template demo
-    description []: Demonstrating https://github.com/simonw/click-app
+    description []: Demonstrating https://github.com/william-cass-wright/click-app
     hyphenated [click-app-template-demo]: 
     underscored [click_app_template_demo]: 
-    github_username []: simonw
-    author_name []: Simon Willison
+    abbreviated []: 
+    github_username []: william-cass-wright
+    author_name []: Will Wright
 
 I strongly recommend accepting the suggested value for "hyphenated" and "underscored" by hitting enter on those prompts.
 
