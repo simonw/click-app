@@ -26,7 +26,7 @@ jobs:
         cache: pip
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip install -r main/requirements.txt
     - name: Build demo from template
       run: |-
         cat main/input-for-demo.txt | cookiecutter main
