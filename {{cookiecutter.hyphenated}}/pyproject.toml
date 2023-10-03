@@ -1,5 +1,5 @@
 [project]
-name = "llm-{{ cookiecutter.hyphenated }}"
+name = "{{ cookiecutter.hyphenated }}"
 version = "0.1"
 description = "{{ cookiecutter.description or "" }}"
 readme = "README.md"
