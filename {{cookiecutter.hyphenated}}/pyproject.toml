@@ -1,0 +1,26 @@
+[project]
+name = "llm-{{ cookiecutter.hyphenated }}"
+version = "0.1"
+description = "{{ cookiecutter.description or "" }}"
+readme = "README.md"
+authors = [{name = "{{ cookiecutter.author_name }}"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click"
+]
+{% if cookiecutter.github_username %}
+[project.urls]
+Homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}"
+Changelog = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/releases"
+Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/issues"
+CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/actions"
+{% endif %}
+[project.entry-points.console_scripts]
+{{ cookiecutter.hyphenated }} = "{{ cookiecutter.underscored }}.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
