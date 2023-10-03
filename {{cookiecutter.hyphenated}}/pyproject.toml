@@ -20,7 +20,7 @@ Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.
 CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/actions"
 {% endif %}
 [project.entry-points.console_scripts]
-{{ cookiecutter.underscored }} = "{{ cookiecutter.underscored }}.cli:cli"
+{{ cookiecutter.hyphenated }} = "{{ cookiecutter.underscored }}.cli:cli"
 
 [project.optional-dependencies]
 test = ["pytest"]
