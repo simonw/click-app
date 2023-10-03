@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout click-app
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: main
     - name: Checkout click-app-template-demo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: simonw/click-app-template-demo
         path: click-app-template-demo-current
