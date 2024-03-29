@@ -89,16 +89,20 @@ Push your `main` branch to GitHub like this:
 
 The template will have created a GitHub Action which runs your tool's test suite against every commit.
 
-## Publishing your tool as a package to PyPI
+## Publishing your cool as a package to PyPI
 
-The template also includes an Action for publishing packages to [PyPI](https://pypi.org/).
+The template also includes a `publish.yml` GitHub Actions workflow for publishing packages to [PyPI](https://pypi.org/), using [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish).
 
-To use this action, you need to create a PyPI account and an API token against that account.
+To use this action, you need to create a PyPI account and [configure a Trusted Publisher](https://til.simonwillison.net/pypi/pypi-releases-from-github) for this package.
 
-Once you have created your account, navigate to https://pypi.org/manage/account/token/ and create an API token. For initial publication of the package you will need to set the scope of the token to "Entire account (all projects)".
+Once you have created your account, navigate to https://pypi.org/manage/account/publishing/ and create a "pending publisher" for the package. Use the following values:
 
-Add that token to your repository as a GitHub secret called `PYPI_TOKEN`. You can find this in the "Settings -> Secrets -> New Secret" area of the repository. The token should begin with the string `pypi-`.
+- **PyPI Project Name:** The name of your package
+- **Owner:** Your GitHub username or organization - the "foo" in `github.com/foo/bar`
+- **Repsitory name:** The name of your repository - the "bar" in `github.com/foo/bar`
+- **Workflow name:** `publish.yml`
+- **Environment name:** `release`
 
-Now, any time you create a new "Release" on GitHub the Action will build your package and push it to PyPI. The tag for the new release needs to match the `VERSION` string at the top of your `pyproject.toml` file.
+Now, any time you create a new "Release" on GitHub the Action will build your package and push it to PyPI.
 
-After the first release has gone out you can create a new PyPI API token that is scoped just to that project and use that to replace the `PYPI_TOKEN` secret in your GitHub repository settings.
+The tag for your release needs to match the `VERSION` string at the top of your `pyproject.toml` file. You should bump this version any time you release a new version of your package.
