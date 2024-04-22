@@ -19,7 +19,7 @@ Changelog = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutt
 Issues = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/issues"
 CI = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/actions"
 {% endif %}
-[project.entry-points.console_scripts]
+[project.scripts]
 {{ cookiecutter.hyphenated }} = "{{ cookiecutter.underscored }}.cli:cli"
 
 [project.optional-dependencies]
