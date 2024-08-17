@@ -89,7 +89,7 @@ git push -u origin main
 ```
 The template will have created a GitHub Action which runs your tool's test suite against every commit.
 
-## Publishing your cool as a package to PyPI
+## Publishing your tool as a package to PyPI
 
 The template also includes a `publish.yml` GitHub Actions workflow for publishing packages to [PyPI](https://pypi.org/), using [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish).
 
