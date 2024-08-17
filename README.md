@@ -46,7 +46,7 @@ If your tool is called `my-new-tool`, you can start working on it like so:
 ```bash
 cd my-new-tool
 # Create and activate a virtual environment:
-python3 -m venv venv
+python -m venv venv
 source venv/bin/activate
 # Install dependencies so you can edit the project:
 pip install -e '.[test]'
@@ -61,7 +61,7 @@ my-new-tool, version 0.1
 ```
 You can run the default test for your tool like so:
 ```
-pytest
+python -m pytest
 ```
 This will execute the test in `tests/test_my_new_tool.py`.
 
