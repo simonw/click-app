@@ -5,7 +5,7 @@ description = "{{ cookiecutter.description or "" }}"
 readme = "README.md"
 authors = [{name = "{{ cookiecutter.author_name }}"}]
 license = "Apache-2.0"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = []
 dependencies = [
     "click"

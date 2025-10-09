@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout click-app
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         path: main
     - name: Checkout click-app-template-demo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: simonw/click-app-template-demo
         path: click-app-template-demo-current
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_PUSH }}
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
         python-version: "3.11"
         cache: pip
